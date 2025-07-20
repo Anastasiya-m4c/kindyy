@@ -1,5 +1,8 @@
 from django.db import models
 from django.contrib.auth.models import User
+# from django.utils import timezone
+from .choices import SWANSEA_AREAS
+
 
 STATUS = ((0, "Draft"), (1, "Published"))
 
@@ -21,5 +24,13 @@ class Post(models.Model):
         help_text="Tick if you offer pick-up and drop-off services"
     )
     address = models.CharField(max_length=100)
-    
+    created_on = models.DateTimeField(auto_now_add=True)
+    area = models.CharField(max_length=50, choices=SWANSEA_AREAS, default='swansea_city_centre')
+
+    class Meta:
+        ordering = ["-created_on"]
+
+    def __str__(self):
+        return f"{self.title} | written by {self.author}"
+
 
