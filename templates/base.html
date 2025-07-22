@@ -1,3 +1,5 @@
+{% load static %}
+
 {% url 'home' as home_url %}
 <!-- {% url 'about' as about_url %}
 {% url 'contact' as contact_url %} -->
@@ -9,6 +11,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kindyy</title>
+
+    <!-- Custom CSS -->
+<link rel="stylesheet" href="{% static 'css/style.css' %}">
 
     <!-- Google Fonts CSS -->
 <!-- <link rel="preconnect" href="https://fonts.gstatic.com">
