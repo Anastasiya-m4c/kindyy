@@ -1,9 +1,21 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
 from django.views import generic
 from .models import Post
 
 
 # Create your views here.
+
+def post_detail(request, slug):
+    # Display an individual :model:`blog.Post`.
+
+    queryset = Post.objects.filter(status=1)
+    post = get_object_or_404(queryset, slug=slug)
+
+    return render(
+        request,
+        "kindyy/post_detail.html",
+        {"post": post},
+    )
 
 class PostList(generic.ListView):
     queryset = Post.objects.filter(status=1)
