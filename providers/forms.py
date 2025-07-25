@@ -5,7 +5,5 @@ class PostForm(forms.ModelForm):
     class Meta:
         model = Post
         fields = [
-            'title', 'slug', 'content', 'status',
-            'accepts_30_hours', 'pickup_dropoff_available',
-            'address', 'area'
+            'title', 'content', 'accepts_30_hours', 'pickup_dropoff_available', 'address', 'area'
         ]
