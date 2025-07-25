@@ -65,5 +65,5 @@ def delete_post(request, slug):
         post.delete()
         return redirect('my_posts')
 
-    return render(request, 'kindyy/post_confirm_delete.html', {'post': post})
+    return render(request, 'kindyy/confirm_delete.html', {'post': post})
 
