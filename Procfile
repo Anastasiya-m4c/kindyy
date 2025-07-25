@@ -1,1 +1,1 @@
-web: gunicorn kindyy.wsgi
+web: gunicorn childcare_platform.wsgi
