@@ -9,10 +9,8 @@ from .models import Post
 
 def post_detail(request, slug):
     # Display an individual :model:`blog.Post`.
-
     queryset = Post.objects.filter(status=1)
     post = get_object_or_404(queryset, slug=slug)
-
     return render(
         request,
         "kindyy/post_detail.html",
@@ -20,12 +18,14 @@ def post_detail(request, slug):
     )
 
 class PostList(generic.ListView):
+    # List all published posts
     queryset = Post.objects.filter(status=1)
     template_name = 'kindyy/index.html'
     paginate_by = 6
 
 @login_required
 def create_post(request):
+    # Create a new post
     if request.method == 'POST':
         form = PostForm(request.POST)
         if form.is_valid():
@@ -39,14 +39,15 @@ def create_post(request):
 
 @login_required
 def my_posts(request):
+    # Display posts created by the logged-in user
     user_posts = Post.objects.filter(author=request.user)
     return render(request, 'kindyy/my_posts.html', {'posts': user_posts})
 
 
 @login_required
 def edit_post(request, slug):
+    # Edit an existing post
     post = get_object_or_404(Post, slug=slug, author=request.user)
-
     if request.method == 'POST':
         form = PostForm(request.POST, instance=post)
         if form.is_valid():
@@ -54,11 +55,11 @@ def edit_post(request, slug):
             return redirect('my_posts')
     else:
         form = PostForm(instance=post)
-
     return render(request, 'kindyy/post_form.html', {'form': form, 'edit': True})
 
 @login_required
 def delete_post(request, slug):
+    # Delete a post
     post = get_object_or_404(Post, slug=slug, author=request.user)
 
     if request.method == 'POST':
