@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>My Posts</h2>
+{% for post in post_list %}
+    <h3>{{ post.title }}</h3>
+    <p>{{ post.created_on }}</p>
+    <p>Status: {{ post.get_status_display }}</p>
+    <a href="{% url 'post_detail' post.slug %}">View</a>
+{% empty %}
+    <p>You haven't posted anything yet.</p>
+{% endfor %}
+{% endblock %}
