@@ -44,8 +44,8 @@ def my_posts(request):
 
 
 @login_required
-def edit_post(request, post_id):
-    post = get_object_or_404(Post, id=post_id, author=request.user)
+def edit_post(request, slug):
+    post = get_object_or_404(Post, slug=slug, author=request.user)
 
     if request.method == 'POST':
         form = PostForm(request.POST, instance=post)
@@ -58,8 +58,8 @@ def edit_post(request, post_id):
     return render(request, 'kindyy/post_form.html', {'form': form, 'edit': True})
 
 @login_required
-def delete_post(request, post_id):
-    post = get_object_or_404(Post, id=post_id, author=request.user)
+def delete_post(request, slug):
+    post = get_object_or_404(Post, slug=slug, author=request.user)
 
     if request.method == 'POST':
         post.delete()

@@ -1,12 +1,22 @@
 {% extends "base.html" %}
 {% block content %}
-<h2>My Posts</h2>
-{% for post in post_list %}
-    <h3>{{ post.title }}</h3>
-    <p>{{ post.created_on }}</p>
-    <p>Status: {{ post.get_status_display }}</p>
-    <a href="{% url 'post_detail' post.slug %}">View</a>
-{% empty %}
-    <p>You haven't posted anything yet.</p>
-{% endfor %}
+<div class="container py-4">
+    <h2>My Childcare Posts</h2>
+    {% if posts %}
+        <ul class="list-group">
+        {% for post in posts %}
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+                <span>{{ post.title }}</span>
+                <div>
+                    <a href="{% url 'post_detail' post.slug %}" class="btn btn-sm btn-info">View</a>
+                    <a href="{% url 'edit_post' post.slug %}" class="btn btn-sm btn-warning">Edit</a>
+                    <a href="{% url 'delete_post' post.slug %}" class="btn btn-sm btn-danger">Delete</a>
+                </div>
+            </li>
+        {% endfor %}
+        </ul>
+    {% else %}
+        <p>You haven't posted anything yet.</p>
+    {% endif %}
+</div>
 {% endblock %}
