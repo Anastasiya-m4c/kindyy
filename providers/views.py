@@ -38,3 +38,8 @@ def create_post(request):
         form = PostForm()
     return render(request, 'kindyy/post_form.html', {'form': form})
 
+@login_required
+def manage_posts(request):
+    user_posts = Post.objects.filter(author=request.user)
+    return render(request, 'kindyy/manage_posts.html', {'posts': user_posts})
+
