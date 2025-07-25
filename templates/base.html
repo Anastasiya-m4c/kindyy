@@ -53,7 +53,7 @@
                         <a class="nav-link" href="{% url 'create_post' %}">Create Post</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{% url 'manage_posts' %}">Manage Posts</a>
+                        <a class="nav-link" href="{% url 'my_posts' %}">Manage Posts</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link {% if request.path == logout_url %}active{% endif %}" href="{{ logout_url }}">Logout</a>

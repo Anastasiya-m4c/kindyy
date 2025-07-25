@@ -1,7 +1,6 @@
 from django.contrib.auth.decorators import login_required
-from django.shortcuts import redirect
 from .forms import PostForm
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, get_object_or_404, redirect
 from django.views import generic
 from .models import Post
 
@@ -39,7 +38,32 @@ def create_post(request):
     return render(request, 'kindyy/post_form.html', {'form': form})
 
 @login_required
-def manage_posts(request):
+def my_posts(request):
     user_posts = Post.objects.filter(author=request.user)
-    return render(request, 'kindyy/manage_posts.html', {'posts': user_posts})
+    return render(request, 'kindyy/my_posts.html', {'posts': user_posts})
+
+
+@login_required
+def edit_post(request, post_id):
+    post = get_object_or_404(Post, id=post_id, author=request.user)
+
+    if request.method == 'POST':
+        form = PostForm(request.POST, instance=post)
+        if form.is_valid():
+            form.save()
+            return redirect('my_posts')
+    else:
+        form = PostForm(instance=post)
+
+    return render(request, 'kindyy/post_form.html', {'form': form, 'edit': True})
+
+@login_required
+def delete_post(request, post_id):
+    post = get_object_or_404(Post, id=post_id, author=request.user)
+
+    if request.method == 'POST':
+        post.delete()
+        return redirect('my_posts')
+
+    return render(request, 'kindyy/post_confirm_delete.html', {'post': post})
 

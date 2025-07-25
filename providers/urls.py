@@ -3,8 +3,9 @@ from . import views
 
 urlpatterns = [
     path('', views.PostList.as_view(), name='home'),
-    path('<slug:slug>/', views.post_detail, name='post_detail'),
-    path('create/', views.create_post, name='create_post'),  # Create a new post
-    path('manage/', views.manage_posts, name='manage_posts'), # Manage existing posts
+    path('create/', views.create_post, name='create_post'),
+    path('manage/', views.my_posts, name='my_posts'),
+    path('post/<int:post_id>/edit/', views.edit_post, name='edit_post'),
+    path('post/<int:post_id>/delete/', views.delete_post, name='delete_post'),
+    path('<slug:slug>/', views.post_detail, name='post_detail'), 
 ]
-
