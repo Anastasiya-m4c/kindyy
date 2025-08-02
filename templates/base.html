@@ -72,9 +72,14 @@
                             Search by area
                         </a>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">1</a></li>
-                            <li><a class="dropdown-item" href="#">2</a></li>
-                            <li><a class="dropdown-item" href="#">3</a></li>
+                            <li>    
+                                <a class="dropdown-item" href="{% url 'post_search' %}">All Areas</a>
+                            </li>
+                        {% for area in swansea_area %}
+                            <li>
+                                <a class="dropdown-item" href="{% url 'post_search' %}?area={{ area|urlendcode}}">{{ area }}</a>
+                            </li>
+                        {% endfor %}
                         </ul>
                     </li>
                 </ul>
