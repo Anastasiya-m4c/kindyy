@@ -4,6 +4,7 @@ from django.shortcuts import render, get_object_or_404, redirect
 from django.views import generic
 from .models import Post
 from .choices import SWANSEA_AREAS
+from django.core.paginator import Paginator
 
 
 # Create your views here.
@@ -40,8 +41,14 @@ def post_search(request):
     else:
         posts = Post.objects.all()  # no filter, show all posts
 
+    # Add pigination
+    paginator = Paginator(posts, 6)
+    page_number = request.GET.get('page')
+    page_obj = paginator.get_page(page_number)
+
     # Send the data to the template
-    return render(request, post_search, {
+    return render(request, 'kindyy/post_search.html', {
+        'page_obj':page_obj, 
         'posts': posts,                 # the posts to show
         'areas': areas,                 # list of all areas for the dropdown
         'selected_area': selected_area  # so we know what was selected
