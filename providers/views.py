@@ -45,13 +45,16 @@ def post_search(request):
     paginator = Paginator(posts, 6)
     page_number = request.GET.get('page')
     page_obj = paginator.get_page(page_number)
+    is_paginated = page_obj.has_other_pages()
 
     # Send the data to the template
     return render(request, 'kindyy/post_search.html', {
-        'page_obj':page_obj, 
+        'page_obj': page_obj,            # current page object and pagination info
+        'paginator': paginator,         # paginator object for page range
         'posts': posts,                 # the posts to show
         'areas': areas,                 # list of all areas for the dropdown
-        'selected_area': selected_area  # so we know what was selected
+        'selected_area': selected_area,  # so we know what was selected
+        'is_paginated': is_paginated
     })
 
 
