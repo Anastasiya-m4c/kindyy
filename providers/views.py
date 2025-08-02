@@ -41,7 +41,7 @@ def post_search(request):
         posts = Post.objects.all()  # no filter, show all posts
 
     # Send the data to the template
-    return render(request, 'posts/post_search.html', {
+    return render(request, post_search, {
         'posts': posts,                 # the posts to show
         'areas': areas,                 # list of all areas for the dropdown
         'selected_area': selected_area  # so we know what was selected
