@@ -75,9 +75,9 @@
                             <li>    
                                 <a class="dropdown-item" href="{% url 'post_search' %}">All Areas</a>
                             </li>
-                        {% for area in swansea_areas %}
+                        {% for value, display in swansea_areas %}
                             <li>
-                                <a class="dropdown-item" href="{% url 'post_search' %}?area={{ area|urlencode}}">{{ area }}</a>
+                                <a class="dropdown-item" href="{% url 'post_search' %}?area={{ value|urlencode}}">{{ display }}</a>
                             </li>
                         {% endfor %}
                         </ul>

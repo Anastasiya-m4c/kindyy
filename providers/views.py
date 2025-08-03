@@ -25,6 +25,11 @@ class PostList(generic.ListView):
     template_name = 'kindyy/index.html'
     paginate_by = 6
 
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['swansea_areas'] = SWANSEA_AREAS  # Add swansea_areas to the context
+        return context
+
 # List of areas for the dropdown in the search form
 def post_search(request):
     # Get the selected area from the form submission
@@ -54,7 +59,8 @@ def post_search(request):
         'posts': posts,                 # the posts to show
         'areas': areas,                 # list of all areas for the dropdown
         'selected_area': selected_area,  # so we know what was selected
-        'is_paginated': is_paginated
+        'is_paginated': is_paginated, 
+        'swansea_areas': SWANSEA_AREAS  # pass the choices for the dropdown
     })
 
 
