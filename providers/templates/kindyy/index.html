@@ -3,13 +3,11 @@
 {% block content %}
 
     <!-- About Section -->
-    <section id="about" class="py-5">
+    <section id="about" class="">
         <div class="container">
             <h2>Welcome to Kindyy</h2>
             <p>
                 Swansea Childcare Directory — a space designed to help families find trusted local childcare providers in their area.
-                Whether you're looking for a nursery near Morriston, a childminder in Sketty, or after-school help in Uplands, we're here to make the search easier.
-                This site was created with a simple goal: To connect parents with reliable, local childcare options — all in one place.
             </p>
             <p>
                 Are you a childcare provider looking to reach more families? Register with us today to create a post and share your services with the community.
@@ -18,12 +16,12 @@
     </section>
 
         <!-- Childcare provider posts -->
-        <section id="posts" class="py-5">
+        <section id="posts" class="">
             <div class="container">
                 <h3>Latest Childcare Provider Posts</h3>
                 <p>Explore the latest posts from childcare providers in your area.</p>
             </div>
-        <div class="col-12 mt-3 left">
+        <div class="col-12 mt-3 mb-3 left">
             <div class="row">
                 {% for post in post_list %}
                 <div class="col-md-4">

@@ -1,67 +1,78 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
 
-
-body {
-    font-family: 'Poppins', sans-serif;
-    background-color: #EBFCFB;
-    display: flex;
-    flex-direction: column;
-    margin: auto;
-    padding: 50px;
+:root {
+    --color-primary: #74C0FC;     
+    --color-primary-hover: #63B2F2;
+    --color-accent: #A7D8F4;      /* Footer & card background */
+    --color-bg: #fff;             /* Background */
+    --color-text: #333; 
+    --color-muted: #666;
+    --btn-bg: var(--color-primary);
+    --btn-hover: var(--color-primary-hover);
 }
 
-main {
-    flex: 1;
-    padding: 20px;
+/* General Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    color: var(--color-text);
+    background-color: var(--color-bg) !important;
+    margin: 0;
+    padding: 0;
+    
 }
 
 h1, h2, h3 {
     font-family: 'Poppins', sans-serif;
-    color: #333;
+    color: var(--color-text);
 }
 
-.header {
-    background-color: #d38464;
-    color: #333;
-    text-align: center;
-    padding: 1rem;
-}
-.navbar {
-    display: flex;
-    justify-content: center;
-    background-color: #d38464;
-    padding: 1rem;
-}
-.navbar a {
-    color: #333;
-    text-decoration: none;
-    margin: 0 15px;
-    font-weight: 600;
-}
-.navbar a:hover {
-    text-decoration: underline;
-}
-#about {
-    background-color: #497b5d;
-    padding: 2rem;
-    border-radius: 1rem;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-}
 .card {
     border-radius: 1rem;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
     transition: transform 0.3s ease;
+    min-height: 300px;
+    background-color: var(--color-bg);
 }
 
 .card:hover {
     transform: scale(1.02);
 }
 
-footer {
-    background-color: #719680;
+/* .pagination {
+    position: relative;
+    justify-content: center;
+    margin: 20px 0;
+} */
+
+.footer {
+    background-color: var(--color-accent);
+    color: var(--color-text);
+    text-align: center;
+    padding: 1rem;
+    position: relative;
+    bottom: 0;
+    width: 100%;
 }
 .container {
     max-width: 1200px;
     margin: 10 auto;
     padding: 20px;
+}
+
+a, .btn {
+    transition: 0.3s ease;
+}
+
+a:hover, .btn:hover {
+    opacity: 0.85;
+}
+
+.btn-primary {
+    background-color: var(--btn-bg);
+    border: none;
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: var(--btn-hover);
 }
