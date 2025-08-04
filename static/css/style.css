@@ -1,21 +1,24 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
 
 :root {
-    --color-primary: #74C0FC;     
-    --color-primary-hover: #63B2F2;
-    --color-accent: #A7D8F4;      /* Footer & card background */
-    --color-bg: #fff;             /* Background */
-    --color-text: #333; 
-    --color-muted: #666;
-    --btn-bg: var(--color-primary);
+    --color-primary: #4C9EEB; 
+    --color-primary-hover: #3B8ED6; 
+    --color-accent: #ebd395;
+    --color-accent-hover: #FBC02D;
+    --color-bg: #EBDBC4; 
+    --color-surface: #FFFFFF;
+    --color-footer: #a697b0; 
+    --color-text: #10177c; 
+    --color-muted: #6C757D; 
+    --btn-bg: var(--color-primary); 
     --btn-hover: var(--color-primary-hover);
 }
 
 /* General Styles */
-body {
+.body {
     font-family: 'Poppins', sans-serif;
     color: var(--color-text);
-    background-color: var(--color-bg) !important;
+    background-color: var(--color-bg);
     margin: 0;
     padding: 0;
     
@@ -26,16 +29,43 @@ h1, h2, h3 {
     color: var(--color-text);
 }
 
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+h2 {
+    font-size: 1.5rem;
+    margin-bottom: 0.75rem;
+}
+h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.navbar {
+    background-color: var(--color-footer);
+    color: var(--color-surface);
+    font-family: 'Poppins', sans-serif;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 1rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    top: 30px;
+}
+
 .card {
     border-radius: 1rem;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
     transition: transform 0.3s ease;
     min-height: 300px;
-    background-color: var(--color-bg);
+    background-color: var(--color-accent);
 }
 
 .card:hover {
     transform: scale(1.02);
+    background-color: var(--color-accent-hover);
 }
 
 /* .pagination {
@@ -44,35 +74,39 @@ h1, h2, h3 {
     margin: 20px 0;
 } */
 
-.footer {
-    background-color: var(--color-accent);
-    color: var(--color-text);
-    text-align: center;
-    padding: 1rem;
-    position: relative;
-    bottom: 0;
-    width: 100%;
-}
 .container {
     max-width: 1200px;
-    margin: 10 auto;
+    margin: 1 auto;
     padding: 20px;
 }
-
-a, .btn {
-    transition: 0.3s ease;
+a {
+    color: var(--color-primary);
+    text-decoration: none;
+    transition: color 0.3s ease, opacity 0.3s ease;
 }
-
-a:hover, .btn:hover {
+a:hover {
+    color: var(--color-primary-hover);
     opacity: 0.85;
 }
 
-.btn-primary {
-    background-color: var(--btn-bg);
-    border: none;
-    color: white;
+.btn {
+    background-color: var(--color-primary);
+    color: var(--color-surface);
+    text-decoration: none;
+    transition: color 0.3s ease, opacity 0.3s ease;
 }
 
-.btn-primary:hover {
-    background-color: var(--btn-hover);
+.btn:hover {
+    opacity: 0.85;
 }
+
+footer {
+    background-color: var(--color-bg);
+    color: var(--color-text);
+    text-align: center;
+    padding: 1rem;
+    margin-top: auto;
+    border-radius: 0 0 1rem 1rem;
+}
+
+
