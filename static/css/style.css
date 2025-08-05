@@ -3,25 +3,24 @@
 :root {
     --color-primary: #4C9EEB; 
     --color-primary-hover: #3B8ED6; 
-    --color-accent: #ebd395;
-    --color-accent-hover: #FBC02D;
-    --color-bg: #EBDBC4; 
+    --color-accent: #f3f2f2;
+    --color-accent-hover: #FFFFFF;
+    --color-bg: #F4F4ED; 
     --color-surface: #FFFFFF;
-    --color-footer: #a697b0; 
-    --color-text: #10177c; 
+    --color-footer: #F4F4ED; 
+    --color-text: #090e55; 
     --color-muted: #6C757D; 
     --btn-bg: var(--color-primary); 
     --btn-hover: var(--color-primary-hover);
 }
 
 /* General Styles */
-.body {
+body {
     font-family: 'Poppins', sans-serif;
     color: var(--color-text);
     background-color: var(--color-bg);
     margin: 0;
     padding: 0;
-    
 }
 
 h1, h2, h3 {
@@ -34,33 +33,39 @@ h1 {
     margin-bottom: 1rem;
 }
 h2 {
-    font-size: 1.5rem;
+    font-size: 2.5rem;
     margin-bottom: 0.75rem;
 }
 h3 {
+    font-size: 1.75rem;
+    margin-bottom: 0.5rem;
+}
+
+h4 {
     font-size: 1.5rem;
     margin-bottom: 0.5rem;
 }
 
 .navbar {
-    background-color: var(--color-footer);
-    color: var(--color-surface);
+    background-color: var(--color-bg);
     font-family: 'Poppins', sans-serif;
-    padding: 1rem;
+    color: var(--color-text);
+    font-size: large;
+    padding: 0;
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    justify-content: space-between;
     border-radius: 1rem;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
     top: 30px;
 }
 
 .card {
     border-radius: 1rem;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
     transition: transform 0.3s ease;
     min-height: 300px;
-    background-color: var(--color-accent);
+    background-color: var(--color-bg);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border: 1px solid var(--color-primary);
 }
 
 .card:hover {
@@ -68,25 +73,22 @@ h3 {
     background-color: var(--color-accent-hover);
 }
 
-/* .pagination {
-    position: relative;
-    justify-content: center;
-    margin: 20px 0;
-} */
-
 .container {
     max-width: 1200px;
-    margin: 1 auto;
+    margin: 0rem auto;
     padding: 20px;
+    background-color: var(--color-bg);
+    border-radius: 1rem;
 }
 a {
-    color: var(--color-primary);
+    color: var(--color-primary-hover);
     text-decoration: none;
     transition: color 0.3s ease, opacity 0.3s ease;
 }
 a:hover {
     color: var(--color-primary-hover);
     opacity: 0.85;
+    text-decoration: underline;
 }
 
 .btn {
@@ -100,13 +102,12 @@ a:hover {
     opacity: 0.85;
 }
 
-footer {
-    background-color: var(--color-bg);
+.footer {
+    background-color: var(--color-bg) !important;
     color: var(--color-text);
     text-align: center;
     padding: 1rem;
-    margin-top: auto;
-    border-radius: 0 0 1rem 1rem;
+    border-radius: 1rem;
 }
 
 
