@@ -7,38 +7,38 @@
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kindyy</title>
 
     <!-- Google Fonts CSS -->
-<!-- <link rel="preconnect" href="https://fonts.gstatic.com">
+    <!-- <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;700&display=swap" rel="stylesheet"> -->
 
     <!-- Font Awesome CSS -->
-<script src="https://kit.fontawesome.com/352c4b52ca.js" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/352c4b52ca.js" crossorigin="anonymous"></script>
 
     <!-- Bootstrap CSS -->
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
 
     <!-- Custom CSS -->
-<link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
 
 </head>
+
 <body class="d-flex flex-column min-vh-100">
-    
     <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg bg-body-tertiary custom-navbar">
+    <nav class="navbar navbar-expand-lg custom-navbar">
         <div class="container">
-        <!-- Toggler for mobile nav -->
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown"
-                aria-expanded="false" aria-label="Toggle navigation">
-            <span class="fas fa-bars fa-lg"></span>
-        </button>
+            <!-- Toggler for mobile nav -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="fas fa-bars fa-lg"></span>
+            </button>
             <a class="navbar-brand" href="{% url 'home' %}">Kindyy</a>
             <div class="collapse navbar-collapse" id="navbarNavDropdown">
                 <ul class="navbar-nav">
@@ -53,30 +53,34 @@
                         <a class="nav-link" href="{% url 'my_posts' %}">Manage Posts</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link {% if request.path == logout_url %}active{% endif %}" href="{{ logout_url }}">Logout</a>
+                        <a class="nav-link {% if request.path == logout_url %}active{% endif %}"
+                            href="{{ logout_url }}">Logout</a>
                     </li>
-                {% else %}
+                    {% else %}
                     <li class="nav-item">
-                        <a class="nav-link {% if request.path == signup_url %}active{% endif %}" href="{{ signup_url }}"> Sign up </a>
+                        <a class="nav-link {% if request.path == signup_url %}active{% endif %}"
+                            href="{{ signup_url }}"> Sign up </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link {% if request.path == login_url %}active{% endif %}" href="{{ login_url }}">Login</a>
+                        <a class="nav-link {% if request.path == login_url %}active{% endif %}"
+                            href="{{ login_url }}">Login</a>
                     </li>
-                {% endif %}                
+                    {% endif %}
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"
                             aria-expanded="false">
                             Search by area
                         </a>
                         <ul class="dropdown-menu">
-                            <li>    
+                            <li>
                                 <a class="dropdown-item" href="{% url 'post_search' %}">All Areas</a>
                             </li>
-                        {% for value, display in swansea_areas %}
+                            {% for value, display in swansea_areas %}
                             <li>
-                                <a class="dropdown-item" href="{% url 'post_search' %}?area={{ value|urlencode }}">{{ display }}</a>
+                                <a class="dropdown-item" href="{% url 'post_search' %}?area={{ value|urlencode }}">{{
+                                    display }}</a>
                             </li>
-                        {% endfor %}
+                            {% endfor %}
                         </ul>
                     </li>
                 </ul>
@@ -85,28 +89,30 @@
     </nav>
 
     <!-- Main content -->
-    <main class="container flex-grow-1 py-4">  
+    <main class="container flex-grow-1 py-4">
         <section>
             {% block content %}
             <!-- Content will be injected here -->
             {% endblock %}
         </section>
     </main>
-        <!-- Footer -->
-        <footer class="footer mt-auto text-center bg-light py-3">
-            <p>
-                Follow us on:
-                <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">Facebook</a> |
-                <a href="https://www.twitter.com" target="_blank" rel="noopener noreferrer">X</a> |
-                <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">Instagram</a>
-            </p>
-            <p>&copy; 2025 Kindyy. All rights reserved.</p>
-            <p class="small text-muted">Designed and built by Anastasiya McAvoy</p>
-        </footer>
-    
-        <!-- Bootstrap JS -->
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+
+    <!-- Footer -->
+    <footer class="footer mt-auto text-center bg-light py-3">
+        <p>
+            Follow us on:
+            <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">Facebook</a> |
+            <a href="https://www.twitter.com" target="_blank" rel="noopener noreferrer">X</a> |
+            <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">Instagram</a>
+        </p>
+        <p>&copy; 2025 Kindyy. All rights reserved.</p>
+        <p class="small text-muted">Designed and built by Anastasiya McAvoy</p>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous">
-        </script>    
+        </script>
 </body>
+
 </html>
