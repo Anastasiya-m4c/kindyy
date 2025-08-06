@@ -9,9 +9,8 @@
             <h1>{{ post.title }}</h1>
             <p>Created on: {{ post.created_on }}</p>
             <p>Area: {{ post.get_area_display }}</p>
-            <p>Pickup/Drop-off: {% if post.pickup_dropoff_available %}✅{% else %}❌{% endif %}</p>
-            <p>30 hours free childcare (3-4yo only): {% if post.accepts_30_hours %}✅{% else %}❌{% endif %}</p>
-            <hr />
+            <p>Pickup/Drop-off: {% if post.pickup_dropoff_available %}<i class="fa-solid fa-check"></i>{% else %}<i class="fa-solid fa-xmark"></i>{% endif %}</p>
+            <p>30 hours free childcare (3-4yo only): {% if post.accepts_30_hours %}<i class="fa-solid fa-check"></i>{% else %}<i class="fa-solid fa-xmark"></i>{% endif %}</p>
             <div class="post-content">
                 {{ post.content|safe }}
             </div>

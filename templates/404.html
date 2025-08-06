@@ -1,3 +1,7 @@
+{% extends "base.html" %}
+
+{% block content %}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,3 +14,11 @@
     <p><a href="{% url 'home' %}">Return to Home Page</a></p>
 </body>
 </html>
+
+{% endblock %}
+
+{% block footer %}
+    <footer class="mt-auto text-center">
+        <p>&copy; 2023 Kindyy. All rights reserved.</p>
+    </footer>
+{% endblock %}
