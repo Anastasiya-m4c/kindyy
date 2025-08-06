@@ -30,6 +30,7 @@
                             <a href="{% url 'post_detail' post.slug %}" class="post-link">
                                 <h4 class="card-title">{{ post.title }}</h4>
                             </a>
+                            <hr>
                             <p class="area"> <i class="fa-light fa-location-dot"></i> {{ post.get_area_display }}</p>
                             <p>
                                 <i class="fa-solid fa-car-side" style="color: #74C0FC;"></i> Pickup/Drop-off: {% if post.pickup_dropoff_available %}<i class="fa-solid fa-check"></i>{% else %}<i class="fa-solid fa-xmark"></i>{% endif %}
