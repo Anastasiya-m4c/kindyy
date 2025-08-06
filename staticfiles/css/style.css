@@ -56,7 +56,7 @@ h4 {
     align-items: center;
     justify-content: space-between;
     border-radius: 1rem;
-    top: 30px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 .card {
@@ -80,11 +80,13 @@ h4 {
     background-color: var(--color-bg);
     border-radius: 1rem;
 }
+
 a {
     color: var(--color-primary-hover);
     text-decoration: none;
     transition: color 0.3s ease, opacity 0.3s ease;
 }
+
 a:hover {
     color: var(--color-primary-hover);
     opacity: 0.85;
