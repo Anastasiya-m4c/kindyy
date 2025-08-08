@@ -1,6 +1,5 @@
 from django.db import models
 from django.contrib.auth.models import User
-# from django.utils import timezone
 from .choices import SWANSEA_AREAS
 from django.utils.text import slugify
 
@@ -44,7 +43,6 @@ class Post(models.Model):
             self.slug = slug
         super().save(*args, **kwargs)
         
-
     def __str__(self):
         return f"{self.title} | written by {self.author}"
 
