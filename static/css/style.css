@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
 
+/* Color Variables */
 :root {
     --color-primary: #4C9EEB;
     --color-primary-hover: #3B8ED6;
@@ -50,6 +51,7 @@ h4 {
     margin-bottom: 0.5rem;
 }
 
+/* Navbar */
 .navbar {
     background-color: var(--color-bg);
     font-family: 'Poppins', sans-serif;
@@ -85,6 +87,7 @@ h4 {
     border-radius: 1rem;
 }
 
+/* Links and Buttons */
 a {
     color: var(--color-primary-hover);
     text-decoration: none;
@@ -108,6 +111,7 @@ a:hover {
     opacity: 0.85;
 }
 
+/* Footer */
 .footer {
     background-color: var(--color-bg) !important;
     color: var(--color-text);
