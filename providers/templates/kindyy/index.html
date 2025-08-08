@@ -2,55 +2,61 @@
 
 {% block content %}
 
-    <!-- About Section -->
-    <section id="about" class="">
-        <div class="container">
-            <h2>Welcome to Kindyy</h2>
-            <p>
-                Swansea Childcare Directory — a space designed to help families find trusted local childcare providers in their area.
-            </p>
-            <p>
-                Are you a childcare provider looking to reach more families? Register with us today to create a post and share your services with the community.
-            </p>
-        </div>
-    </section>
+<!-- About Section -->
+<section id="about" class="">
+    <div class="container">
+        <h2>Welcome to Kindyy</h2>
+        <p>
+            Swansea Childcare Directory — a space designed to help families find trusted local childcare providers in
+            their area.
+        </p>
+        <p>
+            Are you a childcare provider looking to reach more families? Register with us today to create a post and
+            share your services with the community.
+        </p>
+    </div>
+</section>
 
-        <!-- Childcare provider posts -->
-        <section id="posts" class="py-5">
-            <div class="container">
-                <h3>Latest Childcare Provider Posts</h3>
-                <p>Explore the latest posts from childcare providers in your area.</p>
-            </div>
-        <div class="col-12 mt-3 mb-3 left">
-            <div class="row">
-                {% for post in post_list %}
-                <div class="col-md-4">
-                    <div class="card mb-4">
-                        <div class="card-body">
-                            <a href="{% url 'post_detail' post.slug %}" class="post-link">
-                                <h4 class="card-title">{{ post.title }}</h4>
-                            </a>
-                            <hr>
-                            <p class="area"> <i class="fa-light fa-location-dot"></i> {{ post.get_area_display }}</p>
-                            <p>
-                                <i class="fa-solid fa-car-side" style="color: #74C0FC;"></i> Pickup/Drop-off: {% if post.pickup_dropoff_available %}<i class="fa-solid fa-check"></i>{% else %}<i class="fa-solid fa-xmark"></i>{% endif %}
-                            </p>
-                            <p>
-                                <i class="fa-solid fa-sterling-sign" style="color: #63E6BE;"></i> 30 hours free childcare (3-4yo only): {% if post.accepts_30_hours %}<i class="fa-solid fa-check"></i>{% else %}<i class="fa-solid fa-xmark"></i>{% endif %}
-                            </p>
-                            <p>Created on: {{ post.created_on }}</p>
-                        </div>
+<!-- Childcare provider posts -->
+<section id="posts" class="py-5">
+    <div class="container">
+        <h3>Latest Childcare Provider Posts</h3>
+        <p>Explore the latest posts from childcare providers in your area.</p>
+    </div>
+    <div class="col-12 mt-3 mb-3 left">
+        <div class="row">
+            {% for post in post_list %}
+            <div class="col-md-4">
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <a href="{% url 'post_detail' post.slug %}" class="post-link">
+                            <h4 class="card-title">{{ post.title }}</h4>
+                        </a>
+                        <hr>
+                        <p class="area"> <i class="fa-light fa-location-dot"></i> {{ post.get_area_display }}</p>
+                        <p>
+                            <i class="fa-solid fa-car-side" style="color: #74C0FC;"></i> Pickup/Drop-off: {% if
+                            post.pickup_dropoff_available %}<i class="fa-solid fa-check"></i>{% else %}<i
+                                class="fa-solid fa-xmark"></i>{% endif %}
+                        </p>
+                        <p>
+                            <i class="fa-solid fa-sterling-sign" style="color: #63E6BE;"></i> 30 hours free childcare
+                            (3-4yo only): {% if post.accepts_30_hours %}<i class="fa-solid fa-check"></i>{% else %}<i
+                                class="fa-solid fa-xmark"></i>{% endif %}
+                        </p>
+                        <p>Created on: {{ post.created_on }}</p>
                     </div>
                 </div>
-                {% if forloop.counter|divisibleby:3 %}
             </div>
-            <div class="row">
-                {% endif %}
-                {% endfor %}
-            </div>
+            {% if forloop.counter|divisibleby:3 %}
         </div>
+        <div class="row">
+            {% endif %}
+            {% endfor %}
+        </div>
+    </div>
 
-        <!-- Page pagination -->
+    <!-- Page pagination -->
     {% if is_paginated %}
     <nav aria-label="Page navigation">
         <ul class="pagination justify-content-center">
@@ -75,6 +81,6 @@
     </nav>
     {% endif %}
 
-        </section>
+</section>
 <!-- index.html content ends here -->
 {% endblock %}
