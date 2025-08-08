@@ -6,9 +6,7 @@ from .models import Post
 from .choices import SWANSEA_AREAS
 from django.core.paginator import Paginator
 
-
 # Create your views here.
-
 def post_detail(request, slug):
     # Display an individual :model:`blog.Post`.
     queryset = Post.objects.filter(status=1)
@@ -54,11 +52,11 @@ def post_search(request):
 
     # Send the data to the template
     return render(request, 'kindyy/post_search.html', {
-        'page_obj': page_obj,            # current page object and pagination info
+        'page_obj': page_obj,           # current page object and pagination info
         'paginator': paginator,         # paginator object for page range
         'posts': posts,                 # the posts to show
         'areas': areas,                 # list of all areas for the dropdown
-        'selected_area': selected_area,  # so we know what was selected
+        'selected_area': selected_area, # so we know what was selected
         'is_paginated': is_paginated, 
         'swansea_areas': SWANSEA_AREAS  # pass the choices for the dropdown
     })

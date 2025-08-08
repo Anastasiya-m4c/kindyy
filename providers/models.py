@@ -16,7 +16,7 @@ class Post(models.Model):
         User, on_delete=models.CASCADE, related_name="blog_posts"
     )
     content = models.TextField()
-    status = models.IntegerField(choices=STATUS, default=0)
+    status = models.IntegerField(choices=STATUS, default=1)
     accepts_30_hours = models.BooleanField(
         default=False,
         help_text="Tick if you accept 30 hours free childcare vouchers"
