@@ -30,8 +30,9 @@ View live website [HERE](https://kindyy-3dd7c64206c7.herokuapp.com)
    - [Colour Scheme](#colour-scheme)
 
 2. [Features](#features)
+    - [User Features](#user-features)
+    - [Security Features](#security-features)
 3. [Data Sceema](#data-sceema)
-
 4. [Technologies](#technologies)
     - [Languages Used](#languages-used)
     - [Frameworks Libraries and Programmes Used](#frameworks)
@@ -159,6 +160,7 @@ Overall, this accessible and thoughtfully curated color palette supports an intu
 
 ## Features:
 
+### User features 
 - User registration and authentication with secure login/logout.
 - Full CRUD functionality for childcare provider posts (Create, Read, Update, Delete).
 - Search and filter posts by area and service options.
@@ -170,6 +172,20 @@ Overall, this accessible and thoughtfully curated color palette supports an intu
 - Integration with third-party authentication using django-allauth.
 - Clear visual feedback using icons for features like pickup/drop-off and 30 hours free childcare.
 - Accessibility-conscious color scheme and typography for easy readability.
+
+### Security features
+
+Security has been carefully considered throughout the design and development of this childcare platform to protect both users and data. Key security measures include:
+
+- User Authentication and Authorization: The application uses Django’s built-in authentication system, enhanced with `django-allauth` for secure user registration and login. Certain actions such as creating, editing, or deleting posts are restricted to authenticated users only, preventing unauthorized access.  
+
+- Ownership Verification: Editing and deleting posts require ownership verification, ensuring users can only modify or remove posts they have created. This prevents unauthorized modifications to other users’ data.
+
+- Secure Secret Management: Sensitive data such as secret keys and database URLs are managed through environment variables and not hard-coded, minimizing the risk of accidental exposure.
+
+- Use of Whitenoise: Static files are served securely with Whitenoise middleware, reducing reliance on external services and lowering attack surfaces.
+
+- Admin Approval for Posts: Posts typically require approval by an admin before being published to ensure content quality and security. However, this feature is temporarily disabled to facilitate testing and assessment of the project. In a production environment, enabling this approval process helps prevent unauthorized or inappropriate content from being publicly visible.
 
 
 ## Data Schema
@@ -229,6 +245,7 @@ Overall, this accessible and thoughtfully curated color palette supports an intu
 
 ### Frameworks Libraries and Programmes Used
 
+- Django - The web framework used to develop the full-stack application.
 - Font Awesome - for icons.
 - Favicon.io - to create a favicon.
 - Colormind.io - to create a colour scheme.
@@ -237,11 +254,17 @@ Overall, this accessible and thoughtfully curated color palette supports an intu
 - Devtools - for debugging and adjusting layouts.
 - Lighthouse - for testing especially performance related issues.
 - Wave evaluation tool - for any accessibility related issues.
-- Chat GPT - for generating site content.
+- Chat GPT - for generating content and documentation.
 - axe DevTools - for any accessibility related issues.
-- Django 
-- Heroku 
-- Installed apps & libraries
+- Heroku - Cloud platform used for hosting and deploying the Django application.
+- Installed Django Apps & Libraries — Including:
+    - `django-allauth` for user authentication and social login
+    - `crispy-forms` and `crispy-bootstrap5` for improved form styling
+    - `django-summernote` for rich text editing in admin
+    - `Whitenoise`  for static file serving in production.
+    - `Gunicorn` for running Django on Heroku.
+    - `Psycopg2` PostgreSQL database adapter for Python.
+    - `Bootstrap` CSS framework for responsive design.
 
 ## Testing
 
