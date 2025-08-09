@@ -171,9 +171,51 @@ Overall, this accessible and thoughtfully curated color palette supports an intu
 - Clear visual feedback using icons for features like pickup/drop-off and 30 hours free childcare.
 - Accessibility-conscious color scheme and typography for easy readability.
 
-## Data Sceema
 
-- 
+## Data Schema
+
+### Entities and Attributes
+
+- **User**  
+  - id (Primary Key)  
+  - username  
+  - email  
+  - password  
+
+- **Post**  
+  - id (Primary Key)  
+  - title  
+  - slug  
+  - content  
+  - status (draft/published)  
+  - accepts_30_hours (boolean)  
+  - pickup_dropoff_available (boolean)  
+  - address  
+  - created_on (timestamp)  
+  - area (choice field)  
+  - author_id (Foreign Key to User)
+
+### Relationships
+
+- A **User** can create multiple **Posts** (One-to-Many)  
+- Each **Post** is authored by a single **User**
+
+### Schema table 
+
+| Field Name              | Data Type         | Constraints / Options                           | Description                                              |
+|-------------------------|-------------------|------------------------------------------------|----------------------------------------------------------|
+| `id`                    | Integer (Auto)    | Primary Key, Auto-increment                     | Unique identifier for each post                           |
+| `title`                 | CharField (200)   | Unique, Required                                | Title of the childcare provider post                      |
+| `slug`                  | SlugField (200)   | Unique, Auto-generated if blank                 | URL-friendly unique identifier for the post               |
+| `author`                | ForeignKey (User) | Required, on_delete=CASCADE                      | Reference to the user who created the post                |
+| `content`               | TextField         | Required                                        | Main content/description of the childcare services        |
+| `status`                | IntegerField      | Choices: Draft (0), Published (1), Default=1   | Post status to control visibility                          |
+| `accepts_30_hours`      | BooleanField      | Default=False                                   | Whether 30 hours free childcare vouchers are accepted     |
+| `pickup_dropoff_available`| BooleanField    | Default=False                                   | Whether pick-up/drop-off services are offered              |
+| `address`               | CharField (100)   | Required                                        | Address of the childcare provider                          |
+| `created_on`            | DateTimeField     | Auto_now_add=True                               | Timestamp of when the post was created                      |
+| `area`                  | CharField (50)    | Choices: SWANSEA_AREAS, Default='swansea_city_centre' | Geographic area of the provider's location             |
+
 
 ## Technologies 
 
