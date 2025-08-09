@@ -145,16 +145,31 @@ Final MVP version:
 
 ### Typography
 
-- 
+- For my Kindyy website, font chosen is **Poppins**, a clean and modern font known for it's geometric shapes and excellent readability. This font choice creates a friendly and approachable feel, which aligns perfectly with the site’s mission to support families and childcare providers. Using Poppins ensures that the text appears clear and consistent across all devices and screen sizes.
+Overall, the typography balances professionalism with warmth, helping users feel welcomed while providing an easy-to-navigate, trustworthy experience.
 
 ### Colour Sceeme
 
-- 
+- Color scheme for Kindyy has been carefully selected to create a clean, soft, and simple visual experience that keeps the focus on our core mission: connecting families with local childcare providers. The palette combines a calming background of soft off-white tones with soothing soft blue. This conveys professionalism and warmth, helping to establish a welcoming atmosphere for users.
+
+The text color ensures strong contrast against the light backgrounds, supporting readability and accessibility for users with varying vision needs. 
+
+Overall, this accessible and thoughtfully curated color palette supports an intuitive user experience by reducing distractions and highlighting key information, enabling families and providers to engage effortlessly with the platform.
+
 
 ## Features:
 
-- 
-
+- User registration and authentication with secure login/logout.
+- Full CRUD functionality for childcare provider posts (Create, Read, Update, Delete).
+- Search and filter posts by area and service options.
+- Pagination for browsing large sets of posts efficiently.
+- Confirmation modal before delete actions to prevent accidental removals.
+- Redirect users to the page where their post appears immediately after creation.
+- Dynamic UI updates after CRUD actions to reflect changes without full page reloads.
+- Responsive design ensuring usability across devices.
+- Integration with third-party authentication using django-allauth.
+- Clear visual feedback using icons for features like pickup/drop-off and 30 hours free childcare.
+- Accessibility-conscious color scheme and typography for easy readability.
 
 ## Data Sceema
 
