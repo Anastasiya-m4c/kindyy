@@ -1,1 +1,247 @@
-# kindyy
+Welcome Anastasiya McAvoy,
+
+## Code Institute - Milestone project 3: Backend Development
+## KINDYY
+
+### About
+
+
+
+View live website [HERE]()
+
+![image from am I responsive to demonstrate responsiveness on the site in all screen sizes]()
+
+## Table Of Contents:
+
+1. [Design & Planning](#design-&-planning)
+
+   - [User Stories](#user-stories)
+   - [Wireframes](#wireframes)
+   - [Typography](#typography)
+   - [Colour Scheme](#colour-scheme)
+
+2. [Features](#features)
+3. [Data Sceema](#data-sceema)
+
+4. [Technologies](#technologies)
+    - [Languages Used](#languages-used)
+    - [Frameworks Libraries and Programmes Used](#frameworks)
+5. [Testing](#testing)
+6. [Bugs](#bugs)
+7. [Deployment](#deployment)
+8. [Credits](#credits)
+
+## Design & Planning:
+
+### User Stories
+
+### 1. User Story: xxx
+
+**As a user,**  
+- 
+**So that I can**
+- 
+
+### Future developments
+
+**XXX**  
+_Objective:_   
+_User Story:_ 
+
+**AAA WCAG Accessibility Standards**  
+_Objective:_ Address any outstanding accessibility warnings to achieve AAA standard.  
+_User Story:_ I want this game to be fully accessible with best practices followed so that it's fully compatible with assistive technologies.
+
+### Wireframes
+
+This site is designed to be simple, clean, and distraction-free. 
+
+![Wiferfames for WEB browsers]()  
+
+
+Final MVP version:  
+
+![Homepage]()  
+
+
+### Typography
+
+- 
+
+### Colour Sceeme
+
+- 
+
+## Features:
+
+- 
+
+
+## Data Sceema
+
+- 
+
+## Technologies 
+
+### Languages Used
+
+- HTML - To create a basic site structure.
+- CSS - To create custom styles.
+- Python - To create custom models & views.
+- Bootstrap - For consistent styling and improved responsiveness.
+- Markdown - To create a README file. 
+
+### Frameworks Libraries and Programmes Used
+
+- Font Awesome - for icons.
+- Favicon.io - to create a favicon.
+- Colormind.io - to create a colour scheme.
+- Google Fonts - for custom font size that fits with the of the industry.
+- GitPod - to develop project and organise version control.
+- Devtools - for debugging and adjusting layouts.
+- Lighthouse - for testing especially performance related issues.
+- Wave evaluation tool - for any accessibility related issues.
+- Chat GPT - for generating site content.
+- axe DevTools - for any accessibility related issues.
+- Django 
+- Heroku 
+- Installed apps & libraries
+
+## Testing
+
+Throughout the development of this project, I have conducted several rounds of testing to ensure a smooth user experience, robust functionality, and adherence to web standards. The testing covered browser compatibility, accessibility, functionality, real device testing, and UI/UX design which was achieved through a combination of manual testing and use of code validators, tools like Lighthouse & plugins and validators.
+
+_Manual Testing:_ The core features 
+
+_Error Handling:_ 
+
+
+### Google's Lighthouse Performance
+
+- WEB browser  
+  ![HTML index.html]()
+  ![HTML my_post.html]()
+  ![HTML post_detail.html]()
+  ![HTML post_form.html]()
+  ![HTML post_search.html]()
+  ![HTML confirm_delete.html]() 
+
+- Mobile  
+  ![HTML index.html]()
+  ![HTML my_post.html]()
+  ![HTML post_detail.html]()
+  ![HTML post_form.html]()
+  ![HTML post_search.html]()
+  ![HTML confirm_delete.html]() 
+
+### Browser Compatibility
+
+| Browser tested | Intended appearance | Intended responsiveness |
+| -------------- | ------------------- | ----------------------- |
+| Chrome         | Good                | Good                    |
+| FireFox        | Good                | Good                    |
+| Safari         | Good                | Good                    |
+
+### Responsiveness
+
+This is tested on a combination of real life devices and well as responsive viewer in Chrome. No issues observed.
+
+- iPhone SE
+- iPhone 13
+- Serface pro 7
+- Nest hub MAX
+- Google pixel 8a
+- Web Browser
+
+### Code Validation
+
+Validation completed vith no errors.
+
+- CSS    
+![CSS]()
+- JS HINT  
+![JSHINT]()
+- HTML  
+  ![HTML index.html]()
+  ![HTML my_post.html]()
+  ![HTML post_detail.html]()
+  ![HTML post_form.html]()
+  ![HTML post_search.html]()
+  ![HTML confirm_delete.html]() 
+
+### Manual Testing user stories or/and features
+
+### Accessibility
+
+The colors have been carefully selected to comply with accessibility contrast standards, ensuring readability and visual clarity for all users. To verify these standards, the site has been tested using the WAVE & axe DevTools plugins on Chrome, which checks for any potential accessibility issues. And in accordance to axe DevTools has acheived a WCAG 2.1 AA standard.
+
+Additionally, further manual testing with VoiceOver and using tab navigation has also been performed to ensure that the game is fully usabe for users with impairments or using asistive technologies, further enhancing the user experience for a diverse audience.
+
+This will be further addressed in the future developments to reach full AAA standard.
+
+![axe DevTools]()
+![WAVE]()
+![Tab navigation manual testing]()
+![Voice over manual testing]()
+
+## Bugs
+
+_Issue_: 
+_Cause_: 
+_Solution_: 
+
+_Issue_:   
+_Cause_: 
+_Solution_:  
+
+_Issue_: 
+_Cause_: 
+_Solution_: 
+
+_Issue_:  
+_Cause_: 
+_Solution_: 
+
+_Issue_: 
+_Cause_: 
+_Solution_:   
+
+_Issue_:  
+_Cause_: 
+_Solution_:   
+
+_Issue_: 
+_Cause_: 
+_Solution_: 
+
+
+## Known Issues
+
+- Search areas only appear on home page. All areas appear on all pages.
+
+
+## Deployment
+
+#### Creating Repository on GitHub
+
+1. First make sure you are signed into [Github](https://github.com/) and go to the code institutes template, which can be found [here](https://github.com/Code-Institute-Org/gitpod-full-template).
+2. Then click on **use this template** and select **Create a new repository** from the drop-down. Enter the name for the repository and click **Create repository from template**.
+3. Once the repository was created, I clicked the green **gitpod** button to create a workspace in gitpod so that I could write the code for the site.
+4. Use terminal command to link it to VS code.
+
+#### Deploying on Heroku
+
+The site was deployed to Heroku app using the following method:
+
+1. 
+2. 
+
+## Credits
+
+### Special thanks:
+
+**David Bowers** for support and mentoring.  
+**Marco** for continuous support and unlimited information.  
+**Kyle** for being my number one motivator and biggest fan.
+
+---
