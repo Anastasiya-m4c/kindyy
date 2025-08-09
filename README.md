@@ -98,13 +98,29 @@ View live website [HERE](https://kindyy-3dd7c64206c7.herokuapp.com)
 
 ### Future developments
 
-**XXX**  
-_Objective:_   
-_User Story:_ 
+- **User Reviews and Ratings**  
+Allow parents to leave reviews and rate childcare providers, helping others make informed decisions.
 
-**AAA WCAG Accessibility Standards**  
-_Objective:_ Address any outstanding accessibility warnings to achieve AAA standard.  
-_User Story:_ I want this game to be fully accessible with best practices followed so that it's fully compatible with assistive technologies.
+- **Advanced Search & Filters**  
+Add filters for more detailed search criteria like age groups accepted, special needs support, opening hours, price range, and languages spoken.
+
+- **Booking and Availability Calendar**  
+Enable parents to check availability and book childcare slots directly through the platform.
+
+- **User Profiles and Dashboards**  
+Provide both parents and providers with personalized dashboards to manage their bookings, posts, preferences, and communication.
+
+- **Messaging System**  
+Add an internal messaging feature so parents and providers can communicate securely without sharing personal contact details.
+
+- **Mobile App Development**  
+Create a mobile app for easier access on the go, with push notifications for booking updates or new posts.
+
+- **Integration with Payment Systems**  
+Facilitate secure payments or deposits for childcare services through the platform.
+
+- **AAA WCAG Accessibility Standards**  
+Further development for this site to be fully accessible with best practices followed so that it's fully compatible with assistive technologies.
 
 ### Wireframes
 
