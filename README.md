@@ -270,10 +270,11 @@ Security has been carefully considered throughout the design and development of 
 
 Throughout the development of this project, I have conducted several rounds of testing to ensure a smooth user experience, robust functionality, and adherence to web standards. The testing covered browser compatibility, accessibility, functionality, real device testing, and UI/UX design which was achieved through a combination of manual testing and use of code validators, tools like Lighthouse & plugins and validators.
 
-_Manual Testing:_ The core features 
+_Manual Testing:_  
+The core features such as user registration, login/logout, creating, editing, and deleting posts were tested manually on multiple browsers and devices. User flows were verified to ensure that navigation, form submissions, and dynamic content updates functioned as expected.
 
-_Error Handling:_ 
-
+_Error Handling:_  
+The application gracefully handles errors such as invalid form submissions and unauthorized access attempts. User-friendly messages guide the user to correct any mistakes, and proper HTTP responses are returned for server errors.
 
 ### Google's Lighthouse Performance
 
