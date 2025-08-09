@@ -1,3 +1,7 @@
+"""
+URL patterns for the blog application.
+
+"""
 from django.urls import path
 from . import views
 
@@ -8,5 +12,5 @@ urlpatterns = [
     path('search/', views.post_search, name='post_search'),
     path('edit/<slug:slug>/', views.edit_post, name='edit_post'),
     path('delete/<slug:slug>/', views.delete_post, name='delete_post'),
-    path('<slug:slug>/', views.post_detail, name='post_detail'), 
+    path('<slug:slug>/', views.post_detail, name='post_detail'),
 ]
