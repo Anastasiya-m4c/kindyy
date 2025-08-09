@@ -1,3 +1,8 @@
+"""
+List of areas in Swansea for use as choices in forms and models.
+
+"""
+
 SWANSEA_AREAS = [
     ('birchgrove', 'Birchgrove'),
     ('bonymaen', 'Bonymaen'),
@@ -25,4 +30,3 @@ SWANSEA_AREAS = [
     ('uplands', 'Uplands'),
     ('west_cross', 'West Cross'),
 ]
-
