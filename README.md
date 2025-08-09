@@ -4,7 +4,7 @@ Welcome Anastasiya McAvoy,
 ## KINDYY
 
 ### About
-
+- 
 
 
 View live website [HERE]()
