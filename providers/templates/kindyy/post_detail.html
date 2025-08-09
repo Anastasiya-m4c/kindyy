@@ -10,8 +10,7 @@
             <p>Area: {{ post.get_area_display }}</p>
             <p>Pickup/Drop-off: {% if post.pickup_dropoff_available %}<i class="fa-solid fa-check"></i>{% else %}<i
                     class="fa-solid fa-xmark"></i>{% endif %}</p>
-            <p>30 hours free childcare (3-4yo only): {% if post.accepts_30_hours %}<i class="fa-solid fa-check"></i>{%
-                else %}<i class="fa-solid fa-xmark"></i>{% endif %}</p>
+            <p>30 hours free childcare (3-4yo only): {% if post.accepts_30_hours %}<i class="fa-solid fa-check"></i>{% else %}<i class="fa-solid fa-xmark"></i>{% endif %}</p>
             <hr>
             <div class="post-content">
                 {{ post.content|safe }}
