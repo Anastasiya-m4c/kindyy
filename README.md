@@ -126,12 +126,21 @@ Further development for this site to be fully accessible with best practices fol
 
 This site is designed to be simple, clean, and distraction-free. 
 
-![Wiferfames for WEB browsers]()  
+![Wiferfames for WEB browsers](static/images/readme/wireframes_web.png)
 
+![Wiferfames for Mobile browsers](static/images/readme/wireframes_mobile.png)
 
 Final MVP version:  
 
-![Homepage]()  
+![Homepage](static/images/readme/homepage.png)  
+![Navigation](static/images/readme/navbar.png)  
+![About](static/images/readme/about.png)  
+![Cards](static/images/readme/cards.png)  
+![Pagination](static/images/readme/pagination_nav.png)  
+![Create](static/images/readme/create.png)  
+![Manage](static/images/readme/manage.png)  
+![Search](static/images/readme/search_view.png)  
+![Search Filter](static/images/readme/search_nav.png)  
 
 
 ### Typography
