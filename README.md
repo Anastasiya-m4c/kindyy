@@ -4,7 +4,16 @@ Welcome Anastasiya McAvoy,
 ## KINDYY
 
 ### About
-- 
+
+## About Kindyy
+
+**Kindyy** is a local childcare directory designed to help parents quickly find and connect with trusted nurseries and childminders in their area. The platform allows registered childcare providers to create and manage detailed business profiles, highlighting their services, location, and availability.
+
+The idea for Kindyy came from my own experience as a parent struggling to find suitable childcare in my area. The search process was time-consuming, fragmented, and often frustrating — so I wanted to create a single, easy-to-use platform that brings together local providers and parents in one place.
+
+Parents can browse listings, filter by area and service options, and view key information such as facilities offered, funding eligibility, and contact details. Kindyy aims to simplify the search process for families while giving providers an easy way to promote their services in the local community.
+
+Built with **Django** and a responsive, mobile-friendly design, Kindyy offers a smooth experience for both providers and parents on any device.
 
 
 View live website [HERE](https://kindyy-3dd7c64206c7.herokuapp.com)
@@ -33,14 +42,59 @@ View live website [HERE](https://kindyy-3dd7c64206c7.herokuapp.com)
 
 ## Design & Planning:
 
-### User Stories
+## Customer (Parent) User Stories
 
-### 1. User Story: xxx
+### 1. User Story: Browse providers in my town  
+**As a parent,**  
+- I want to browse childcare providers in Swansea  
+**So that I can**  
+- Find suitable childcare options.  
 
-**As a user,**  
-- 
-**So that I can**
-- 
+### 2. User Story: Filter by specific area.  
+**As a parent,**  
+- I want to filter providers by specific area.  
+**So that I can**  
+- Find suitable childcare in my area, close to home or work.  
+
+### 3. User Story: View detailed provider profiles  
+**As a parent,**  
+- I want to view full profiles with services, descriptions, and location  
+**So that I can**  
+- Make an informed decision about childcare.
+
+---
+
+## Provider (Nursery / Childminder) User Stories
+
+### 1. User Story: Create and log into an account  
+**As a provider,**  
+- I want to create an account and log in  
+**So that I can**  
+- Manage my childcare listing securely.
+
+### 2. User Story: Create and publish a business profile  
+**As a provider,**  
+- I want to create and publish my business profile  
+**So that I can**  
+- Attract parents looking for childcare.
+
+### 3. User Story: Add detailed service information  
+**As a provider,**  
+- I want to add details about my services (e.g., 30 free hours, pick-up/drop-off)  
+**So that I can**  
+- Help parents understand what I offer.
+
+### 4. User Story: Update my profile  
+**As a provider,**  
+- I want to edit my profile information easily  
+**So that I can**  
+- Keep my details accurate and relevant.
+
+### 5. User Story: Delete my listing  
+**As a provider,**  
+- I want to delete my listing  
+**So that I can**  
+- Stop receiving inquiries when I have no availability.
 
 ### Future developments
 
