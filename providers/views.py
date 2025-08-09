@@ -1,10 +1,11 @@
 from django.contrib.auth.decorators import login_required
-from .forms import PostForm
 from django.shortcuts import render, get_object_or_404, redirect
 from django.views import generic
+from django.core.paginator import Paginator
+from .forms import PostForm
 from .models import Post
 from .choices import SWANSEA_AREAS
-from django.core.paginator import Paginator
+
 
 # Create your views here.
 def post_detail(request, slug):
@@ -17,6 +18,7 @@ def post_detail(request, slug):
         {"post": post},
     )
 
+
 class PostList(generic.ListView):
     # List all published posts
     queryset = Post.objects.filter(status=1)
@@ -25,8 +27,10 @@ class PostList(generic.ListView):
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        context['swansea_areas'] = SWANSEA_AREAS  # Add swansea_areas to the context
+        context['swansea_areas'] = SWANSEA_AREAS
+        # Add swansea_areas to the context
         return context
+
 
 # List of areas for the dropdown in the search form
 def post_search(request):
@@ -52,12 +56,12 @@ def post_search(request):
 
     # Send the data to the template
     return render(request, 'kindyy/post_search.html', {
-        'page_obj': page_obj,           # current page object and pagination info
+        'page_obj': page_obj,  # current page object and pagination info
         'paginator': paginator,         # paginator object for page range
         'posts': posts,                 # the posts to show
         'areas': areas,                 # list of all areas for the dropdown
-        'selected_area': selected_area, # so we know what was selected
-        'is_paginated': is_paginated, 
+        'selected_area': selected_area,  # so we know what was selected
+        'is_paginated': is_paginated,
         'swansea_areas': SWANSEA_AREAS  # pass the choices for the dropdown
     })
 
@@ -76,11 +80,13 @@ def create_post(request):
         form = PostForm()
     return render(request, 'kindyy/post_form.html', {'form': form})
 
+
 @login_required
 def my_posts(request):
     # Display posts created by the logged-in user
     user_posts = Post.objects.filter(author=request.user)
     return render(request, 'kindyy/my_posts.html', {'posts': user_posts})
+
 
 @login_required
 def edit_post(request, slug):
@@ -93,7 +99,9 @@ def edit_post(request, slug):
             return redirect('my_posts')
     else:
         form = PostForm(instance=post)
-    return render(request, 'kindyy/post_form.html', {'form': form, 'edit': True})
+    return render(
+        request, 'kindyy/post_form.html', {'form': form, 'edit': True})
+
 
 @login_required
 def delete_post(request, slug):
@@ -105,4 +113,3 @@ def delete_post(request, slug):
         return redirect('my_posts')
 
     return render(request, 'kindyy/confirm_delete.html', {'post': post})
-

@@ -318,7 +318,7 @@ This is tested on a combination of real life devices and well as responsive view
 Validation completed vith no errors.
 
 - CSS    
-![CSS]()
+![CSS](static/images/readme/css_validator.png)
 - JS HINT  
 ![JSHINT]()
 - HTML  
