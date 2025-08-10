@@ -334,7 +334,7 @@ This will be further addressed in the future developments to reach full AAA stan
 ![axe DevTools](static/images/readme/devtools.png)
 ![WAVE](static/images/readme/wave.png)
 
-## Bugs
+## Fixed Bugs
 
 ### Issue:
 Error seen in Heroku following deployment.  
