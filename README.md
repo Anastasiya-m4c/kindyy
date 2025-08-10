@@ -32,10 +32,10 @@ View live website [HERE](https://kindyy-3dd7c64206c7.herokuapp.com)
 2. [Features](#features)
     - [User Features](#user-features)
     - [Security Features](#security-features)
-3. [Data Sceema](#data-sceema)
+3. [Data Shcema](#data-shcema)
 4. [Technologies](#technologies)
     - [Languages Used](#languages-used)
-    - [Frameworks Libraries and Programmes Used](#frameworks)
+    - [Frameworks, Libraries and Programmes Used](#frameworks)
 5. [Testing](#testing)
 6. [Bugs](#bugs)
 7. [Deployment](#deployment)
@@ -149,7 +149,7 @@ Final MVP version:
 - For my Kindyy website, font chosen is **Poppins**, a clean and modern font known for it's geometric shapes and excellent readability. This font choice creates a friendly and approachable feel, which aligns perfectly with the site’s mission to support families and childcare providers. Using Poppins ensures that the text appears clear and consistent across all devices and screen sizes.
 Overall, the typography balances professionalism with warmth, helping users feel welcomed while providing an easy-to-navigate, trustworthy experience.
 
-### Colour Sceeme
+### Colour Scheme
 
 - Color scheme for Kindyy has been carefully selected to create a clean, soft, and simple visual experience that keeps the focus on our core mission: connecting families with local childcare providers. The palette combines a calming background of soft off-white tones with soothing soft blue. This conveys professionalism and warmth, helping to establish a welcoming atmosphere for users.
 
@@ -243,14 +243,14 @@ Security has been carefully considered throughout the design and development of 
 - Bootstrap - For consistent styling and improved responsiveness.
 - Markdown - To create a README file. 
 
-### Frameworks Libraries and Programmes Used
+### Frameworks, Libraries and Programmes Used
 
 - Django - The web framework used to develop the full-stack application.
 - Font Awesome - for icons.
 - Favicon.io - to create a favicon.
 - Colormind.io - to create a colour scheme.
-- Google Fonts - for custom font size that fits with the of the industry.
-- GitPod - to develop project and organise version control.
+- Google Fonts - for custom fonts.
+- GitPod - to develop a project and organise version control.
 - Devtools - for debugging and adjusting layouts.
 - Lighthouse - for testing especially performance related issues.
 - Wave evaluation tool - for any accessibility related issues.
@@ -292,7 +292,7 @@ The application gracefully handles errors such as invalid form submissions and u
 
 ### Responsiveness
 
-This is tested on a combination of real life devices and well as responsive viewer in Chrome. No issues observed.
+This is tested on a combination of real life devices as well as responsive viewer in Chrome. No issues observed.
 
 - iPhone SE
 - iPhone 13
@@ -303,7 +303,7 @@ This is tested on a combination of real life devices and well as responsive view
 
 ### Code Validation
 
-Validation completed vith no errors.
+Validation completed with no errors.
 
 - CSS    
 ![CSS](static/images/readme/css_validator.png)
@@ -327,9 +327,9 @@ Validation completed vith no errors.
 
 ### Accessibility
 
-The colors have been carefully selected to comply with accessibility contrast standards, ensuring readability and visual clarity for all users. To verify these standards, the site has been tested using the WAVE & axe DevTools plugins on Chrome, which checks for any potential accessibility issues. And in accordance to axe DevTools has acheived a WCAG 2.1 AA standard.
+The colors have been carefully selected to comply with accessibility contrast standards, ensuring readability and visual clarity for all users. To verify these standards, the site has been tested using the WAVE & axe DevTools plugins on Chrome, which checks for any potential accessibility issues. And in accordance with axe DevTools has acheived a WCAG 2.1 AA standard.
 
-This will be further addressed in the future developments to reach full AAA standard.
+This will be further addressed in future developments to reach the full AAA standard.
 
 ![axe DevTools](static/images/readme/devtools.png)
 ![WAVE](static/images/readme/wave.png)
@@ -394,8 +394,8 @@ Linter warning for env file is being loaded but unused.
 
 ### Issue: 
 Only "all areas" appear on pages like manage, create etc.   
-**Fix:** Fix is needed where areas appear on all pages. This will be addresses as part of future dev following MVP.   
-**Workaround:** Cust can click home and search by area, or can click all areas then then further narrow down by area.   
+**Fix:** Fix is needed where areas appear on all pages. This will be addressed as part of future dev following MVP.   
+**Workaround:** Cust can click home and search by area, or can click all areas then further narrow down by area.   
 
 ---
 
