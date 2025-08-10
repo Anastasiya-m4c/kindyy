@@ -394,7 +394,7 @@ Linter warning for env file is being loaded but unused.
 
 ### Issue: 
 Only "all areas" appear on pages like manage, create etc.   
-**Fix:** Fix is needed where areas appear on all pages.  
+**Fix:** Fix is needed where areas appear on all pages. This will be addresses as part of future dev following MVP.   
 **Workaround:** Cust can click home and search by area, or can click all areas then then further narrow down by area.   
 
 ---
