@@ -394,17 +394,21 @@ Linter warning for env file is being loaded but unused.
 
 ### Issue: 
 Only "all areas" appear on pages like manage, create etc.   
-_Fix_: Fix is needed where areas appear on all pages.  
-_Workaround_: Cust can click home and search by area, or can click all areas then then further narrow down by area.   
+**Fix:** Fix is needed where areas appear on all pages.  
+**Workaround:** Cust can click home and search by area, or can click all areas then then further narrow down by area.   
+
+---
 
 ### Issue:
 Ligthouse report scors poorly on berformace due to unused CSS & JS code.  
-**Fix**: No fix is needed as both bootstrap and fontawesome labraries are being used and can not be removed. 
+**Fix**: No fix is needed as both bootstrap and fontawesome labraries are being used and can not be removed.  
 ![Lighthouse error](static/images/readme/Lighthouse_error.png)
+
+---
 
 ### Issue:
 Wave report is showing low contrast on the muted text.  
-**Fix:** No fix is needed as muted text is an intentional feature for the developer credits. 
+**Fix:** No fix is needed as muted text is an intentional feature for the developer credits.  
 ![Wave error](static/images/readme/wave_error.png)
 
 ## Deployment
