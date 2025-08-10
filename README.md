@@ -405,7 +405,37 @@ _Fix_: No fix is needed as muted text is an intentional feature for the develope
 
 The site was deployed to Heroku app using the following method:
 
-1. 
+1. # ✅ Django Heroku Deployment — Full Steps as Markdown List
+
+- Create and activate a virtual environment:
+  - Run:
+    ```bash
+    python3 -m venv .venv
+    source .venv/bin/activate  # On macOS/Linux
+    # OR
+    .venv\Scripts\activate  # On Windows
+    ```
+
+- Install required packages:
+  - Run:
+    ```bash
+    pip install django gunicorn dj-database-url psycopg2-binary whitenoise
+    pip freeze > requirements.txt
+    ```
+
+- Create a `Procfile` in the root directory:
+  - File contents:
+    ```
+    web: gunicorn childcare_platform.wsgi
+    ```
+
+- Update `settings.py`:
+  - Add `'whitenoise.middleware.WhiteNoiseMiddleware'` to `MIDDLEWARE`, right after `'SecurityMiddleware'`:
+    ```python
+    MIDDLEWARE = [
+        'django.middleware.security.SecurityMiddleware',
+        'whiten
+
 2. 
 
 ## Credits
