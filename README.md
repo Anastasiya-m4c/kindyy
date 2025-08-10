@@ -390,6 +390,23 @@ Linter warning for env file is being loaded but unused.
 **Cause:** `env.py` file is used to load the secret key, but Django (and linters) cannot detect its usage, so it thinks it is unused.  
 **Solution:** Use an inline comment to tell the linter to ignore the warning, since this is intentional to protect the secret key.
 
+## Known Issues
+
+### Issue: 
+Only "all areas" appear on pages like manage, create etc.   
+_Fix_: Fix is needed where areas appear on all pages.  
+_Workaround_: Cust can click home and search by area, or can click all areas then then further narrow down by area.   
+
+### Issue:
+Ligthouse report scors poorly on berformace due to unused CSS & JS code.  
+**Fix**: No fix is needed as both bootstrap and fontawesome labraries are being used and can not be removed. 
+![Lighthouse error](static/images/readme/Lighthouse_error.png)
+
+### Issue:
+Wave report is showing low contrast on the muted text.  
+**Fix:** No fix is needed as muted text is an intentional feature for the developer credits. 
+![Wave error](static/images/readme/wave_error.png)
+
 ## Deployment
 
 #### Creating Repository on GitHub
