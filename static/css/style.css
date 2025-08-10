@@ -65,6 +65,31 @@ h4 {
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
+.navbar {
+    background-color: var(--color-bg);
+    color: var(--color-text);
+    border-radius: 1rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Override link colors inside navbar */
+.navbar .nav-link:hover {
+    color: var(--color-primary) !important;
+}
+
+/* Navbar links */  
+.navbar .nav-link {
+    color: var(--color-text) !important;
+    padding: 0.5rem 1rem;
+    transition: color 0.3s ease;
+} 
+.navbar .nav-link.active {
+    font-weight: bold;
+    color: var(--color-text) !important;
+    border-bottom: 2px solid var(--color-text);
+}
+
+/* Card Styles */
 .card {
     border-radius: 1rem;
     transition: transform 0.3s ease;
@@ -82,14 +107,14 @@ h4 {
 .container {
     max-width: 1200px;
     margin: 0rem auto;
-    padding: 20px;
+    padding: 10px;
     background-color: var(--color-bg);
     border-radius: 1rem;
 }
 
 /* Links and Buttons */
 a {
-    color: var(--color-primary-hover);
+    color: var(--color-text);
     text-decoration: none;
     transition: color 0.3s ease, opacity 0.3s ease;
 }
@@ -101,14 +126,18 @@ a:hover {
 }
 
 .btn {
-    background-color: var(--color-primary);
-    color: var(--color-surface);
     text-decoration: none;
     transition: color 0.3s ease, opacity 0.3s ease;
 }
 
 .btn:hover {
     opacity: 0.85;
+}
+
+.pagination a {
+    color: var(--color-text);
+    background-color: var(--color-accent);
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 /* Footer */
@@ -118,4 +147,9 @@ a:hover {
     text-align: center;
     padding: 1rem;
     border-radius: 1rem;
+}
+
+.footer a {
+    color: var(--color-text);
+    font-weight: bold;
 }
