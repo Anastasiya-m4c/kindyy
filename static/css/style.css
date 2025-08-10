@@ -74,18 +74,18 @@ h4 {
 
 /* Override link colors inside navbar */
 .navbar .nav-link:hover {
-    color: var(--color-primary) !important;
+    color: var(--color-primary);
 }
 
 /* Navbar links */  
 .navbar .nav-link {
-    color: var(--color-text) !important;
+    color: var(--color-text);
     padding: 0.5rem 1rem;
     transition: color 0.3s ease;
 } 
 .navbar .nav-link.active {
     font-weight: bold;
-    color: var(--color-text) !important;
+    color: var(--color-text);
     border-bottom: 2px solid var(--color-text);
 }
 
@@ -142,7 +142,7 @@ a:hover {
 
 /* Footer */
 .footer {
-    background-color: var(--color-bg) !important;
+    background-color: var(--color-bg);
     color: var(--color-text);
     text-align: center;
     padding: 1rem;

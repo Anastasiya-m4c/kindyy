@@ -336,48 +336,59 @@ This will be further addressed in the future developments to reach full AAA stan
 
 ## Bugs
 
-_Issue_: 
-_Cause_: 
-_Solution_: 
+### Issue:
+Error seen in Heroku following deployment.  
+**Cause:** Incorrect file name in Procfile.  
+**Solution:** Change file name from *kindyy* to *childcare_platform*.
 
-_Issue_:   
-_Cause_: 
-_Solution_:  
+---
 
-_Issue_: 
-_Cause_: 
-_Solution_: 
+### Issue:
+Swansea areas not appearing in the dropdown on the home page.  
+**Cause:** Areas are not being passed to the template.  
+**Solution:** Pass `swansea_areas` to the template via `views.py`.
 
-_Issue_:  
-_Cause_: 
-_Solution_: 
+---
 
-_Issue_: 
-_Cause_: 
-_Solution_:   
+### Issue:
+Areas not showing user-friendly names in search dropdown.  
+**Cause:** First element of the tuple is displayed, as it's the way it is stored in the database.  
+**Solution:** Use Django shortcut `post.get_area_display()` to display the label instead of the stored value.
 
-_Issue_:  
-_Cause_: 
-_Solution_:   
+---
 
-_Issue_: 
-_Cause_: 
-_Solution_: 
+### Issue:
+App is broken after using code formatter.  
+**Cause:** By using the formatter, many lines of code were split across multiple lines causing breakages in the code and issues with HTML code checkers.  
+**Solution:** Manually fix any issues by returning code to a single line.
 
+---
 
-## Known Issues
+### Issue:
+Footer CSS styles not being applied.  
+**Cause:** Footer was incorrectly placed inside the card section.  
+**Solution:** Move footer outside of the card section.
 
-_Issue_: Only "all areas" appear on pages like manage, create etc.   
-_Fix_: Fix is needed where areas appear on all pages.  
-_Workaround_: Cust can click home and search by area, or can click all areas then then further narrow down by area.   
+---
 
-_Issue_: Ligthouse report scors poorly on berformace due to unused CSS & JS code.  
-_Fix_: No fix is needed as both bootstrap and fontawesome labraries are being used and can not be removed. 
-![Lighthouse error](static/images/readme/Lighthouse_error.png)
+### Issue:
+Not able to use 'Am I Responsive' checker.  
+**Cause:** Django security setting preventing itself from being embedded inside an iframe.  
+**Solution:** Temporarily override this feature by changing settings to `X_FRAME_OPTIONS = "ALLOWALL"`.
 
-_Issue_: Wave report is showing low contrast on the muted text.  
-_Fix_: No fix is needed as muted text is an intentional feature for the developer credits. 
-![Wave error](static/images/readme/wave_error.png)
+---
+
+### Issue:
+Nav link colours are not updating.  
+**Cause:** Bootstrap default settings.  
+**Solution:** Use higher specificity for links.
+
+---
+
+### Issue:
+Linter warning for env file is being loaded but unused.  
+**Cause:** `env.py` file is used to load the secret key, but Django (and linters) cannot detect its usage, so it thinks it is unused.  
+**Solution:** Use an inline comment to tell the linter to ignore the warning, since this is intentional to protect the secret key.
 
 ## Deployment
 
