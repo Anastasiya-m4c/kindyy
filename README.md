@@ -279,20 +279,8 @@ The application gracefully handles errors such as invalid form submissions and u
 ### Google's Lighthouse Performance
 
 - WEB browser  
-  ![HTML index.html]()
-  ![HTML my_post.html]()
-  ![HTML post_detail.html]()
-  ![HTML post_form.html]()
-  ![HTML post_search.html]()
-  ![HTML confirm_delete.html]() 
+  ![Home](static/images/readme/lighthouse_home.png)
 
-- Mobile  
-  ![HTML index.html]()
-  ![HTML my_post.html]()
-  ![HTML post_detail.html]()
-  ![HTML post_form.html]()
-  ![HTML post_search.html]()
-  ![HTML confirm_delete.html]() 
 
 ### Browser Compatibility
 
@@ -326,8 +314,7 @@ Validation completed vith no errors.
 ![Pylint_forms](static/images/readme/lint_forms.png)
 ![Pylint_models](static/images/readme/lint_models.png)
 ![Pylint_urls](static/images/readme/lint_urls.png)
-![Pylint_views](static/images/readme/lint_viws.png)
-![Pylint_views](static/images/readme/lint_viws.png)
+![Pylint_views](static/images/readme/lint_views.png)
 ![Pylint_settings](static/images/readme/lint_settings.png)
 - HTML  
   ![HTML home](static/images/readme/html_homepage.png)
@@ -405,40 +392,114 @@ _Fix_: No fix is needed as muted text is an intentional feature for the develope
 
 The site was deployed to Heroku app using the following method:
 
-1. # ✅ Django Heroku Deployment — Full Steps as Markdown List
-
-- Create and activate a virtual environment:
+1. Create and activate a virtual environment:
   - Run:
     ```bash
     python3 -m venv .venv
-    source .venv/bin/activate  # On macOS/Linux
+    source .venv/bin/activate  # macOS/Linux
     # OR
-    .venv\Scripts\activate  # On Windows
+    .venv\Scripts\activate  # Windows
     ```
 
-- Install required packages:
+2. Install required Python packages:
   - Run:
     ```bash
     pip install django gunicorn dj-database-url psycopg2-binary whitenoise
     pip freeze > requirements.txt
     ```
 
-- Create a `Procfile` in the root directory:
-  - File contents:
+3. Create a new Django project:
+  - Run:
+    ```bash
+    django-admin startproject childcare_platform .
+    ```
+
+4. Create a new Django app called `providers`:
+  - Run:
+    ```bash
+    python manage.py startapp providers
+    ```
+
+5. Register the `providers` app in `childcare_platform/settings.py`:
+  - Add `'providers',` to the `INSTALLED_APPS` list.
+
+6. Make and apply initial migrations:
+  - Run:
+    ```bash
+    python manage.py makemigrations
+    python manage.py migrate
+    ```
+
+7. Create a Django superuser:
+  - Run:
+    ```bash
+    python manage.py createsuperuser
+    ```
+
+8. Collect static files:
+  - Run:
+    ```bash
+    python manage.py collectstatic
+    ```
+
+9. Create a `Procfile` in the project root:
+  - Add the following line to the file (no file extension):
     ```
     web: gunicorn childcare_platform.wsgi
     ```
 
-- Update `settings.py`:
-  - Add `'whitenoise.middleware.WhiteNoiseMiddleware'` to `MIDDLEWARE`, right after `'SecurityMiddleware'`:
+10. Update `childcare_platform/settings.py` for Heroku:
+  - Add `'whitenoise.middleware.WhiteNoiseMiddleware'` after `'SecurityMiddleware'` in the `MIDDLEWARE` list.
+  - Set:
     ```python
-    MIDDLEWARE = [
-        'django.middleware.security.SecurityMiddleware',
-        'whiten
+    ALLOWED_HOSTS = ['.herokuapp.com']
+    ```
+  - Add static files settings:
+    ```python
+    STATIC_URL = '/static/'
+    STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+    STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+    ```
+  - Configure the database:
+    ```python
+    import dj_database_url
 
-2. 
+    DATABASES = {
+        'default': dj_database_url.config(default='sqlite:///db.sqlite3')
+    }
+    ```
 
-## Credits
+11. Login to Heroku:
+  - Run:
+    ```bash
+    heroku login
+    ```
+12. Connect GitHub repository:
+  - Log into heroku dashboard
+  - Go to 'Deploy' tab 
+  - Connect to github 
+  - Select Kindyy   
+
+13. Add secret key:
+  - Log into heroku dashboard
+  - Go to 'Settings' tab 
+  - Click reveal Config Vars 
+  - Add SECRET_KEY value='django-secret-key'
+
+14. Add database URL:
+  - Log into heroku dashboard
+  - Go to 'Settings' tab 
+  - Click reveal Config Vars 
+  - Add DATABASE_URL value='database_url'
+
+15. Deploy to Heroku:
+  - Log into heroku dashboard
+  - Go to 'Deploy' tab 
+  - Click on deploy branch
+  - Wait for deployment to finish
+  - Click on Open app at the top of the screen. 
+
+16. Done! Kindyy is now live at: https://kindyy-3dd7c64206c7.herokuapp.com
 
 ### Special thanks:
 
