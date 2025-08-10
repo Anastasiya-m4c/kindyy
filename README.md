@@ -319,15 +319,22 @@ Validation completed vith no errors.
 
 - CSS    
 ![CSS](static/images/readme/css_validator.png)
-- JS HINT  
-![JSHINT]()
+- Pylint (VScode) 
+![Pylint_admin](static/images/readme/lint_admin.png)
+![Pylint_apps](static/images/readme/lint_apps.png)
+![Pylint_choices](static/images/readme/lint_choices.png)
+![Pylint_forms](static/images/readme/lint_forms.png)
+![Pylint_models](static/images/readme/lint_models.png)
+![Pylint_urls](static/images/readme/lint_urls.png)
+![Pylint_views](static/images/readme/lint_viws.png)
+![Pylint_views](static/images/readme/lint_viws.png)
+![Pylint_settings](static/images/readme/lint_settings.png)
 - HTML  
-  ![HTML index.html]()
-  ![HTML my_post.html]()
-  ![HTML post_detail.html]()
-  ![HTML post_form.html]()
-  ![HTML post_search.html]()
-  ![HTML confirm_delete.html]() 
+  ![HTML home](static/images/readme/html_homepage.png)
+  ![HTML create](static/images/readme/html_create.png)
+  ![HTML manage](static/images/readme/html_manage.png)
+  ![HTML search](static/images/readme/html_search.png)
+
 
 ### Manual Testing user stories or/and features
 
@@ -335,14 +342,10 @@ Validation completed vith no errors.
 
 The colors have been carefully selected to comply with accessibility contrast standards, ensuring readability and visual clarity for all users. To verify these standards, the site has been tested using the WAVE & axe DevTools plugins on Chrome, which checks for any potential accessibility issues. And in accordance to axe DevTools has acheived a WCAG 2.1 AA standard.
 
-Additionally, further manual testing with VoiceOver and using tab navigation has also been performed to ensure that the game is fully usabe for users with impairments or using asistive technologies, further enhancing the user experience for a diverse audience.
-
 This will be further addressed in the future developments to reach full AAA standard.
 
-![axe DevTools]()
-![WAVE]()
-![Tab navigation manual testing]()
-![Voice over manual testing]()
+![axe DevTools](static/images/readme/devtools.png)
+![WAVE](static/images/readme/wave.png)
 
 ## Bugs
 
@@ -377,8 +380,17 @@ _Solution_:
 
 ## Known Issues
 
-- Search areas only appear on home page. All areas appear on all pages.
+_Issue_: Only "all areas" appear on pages like manage, create etc.   
+_Fix_: Fix is needed where areas appear on all pages.  
+_Workaround_: Cust can click home and search by area, or can click all areas then then further narrow down by area.   
 
+_Issue_: Ligthouse report scors poorly on berformace due to unused CSS & JS code.  
+_Fix_: No fix is needed as both bootstrap and fontawesome labraries are being used and can not be removed. 
+![Lighthouse error](static/images/readme/Lighthouse_error.png)
+
+_Issue_: Wave report is showing low contrast on the muted text.  
+_Fix_: No fix is needed as muted text is an intentional feature for the developer credits. 
+![Wave error](static/images/readme/wave_error.png)
 
 ## Deployment
 
