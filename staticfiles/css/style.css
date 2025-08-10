@@ -134,6 +134,19 @@ a:hover {
     opacity: 0.85;
 }
 
+.btn-signup {
+    background-color: var(--btn-bg);
+    color: var(--color-surface);
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn-signup:hover {
+    background-color: var(--btn-hover);
+    color: var(--color-surface);
+}
+
 .pagination a {
     color: var(--color-text);
     background-color: var(--color-accent);
