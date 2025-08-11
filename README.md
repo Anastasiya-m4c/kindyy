@@ -280,7 +280,10 @@ The application gracefully handles errors such as invalid form submissions and u
 
 - WEB browser  
   ![Home](static/images/readme/lighthouse_home.png)
-
+  ![Create](static/images/readme/lighthouse_create.png)  
+- Mobile browser  
+  ![Home](static/images/readme/lighthouse_mobile_home.png)
+  ![Create](static/images/readme/lighthouse_mobile_create.png) 
 
 ### Browser Compatibility
 
@@ -324,6 +327,20 @@ Validation completed with no errors.
 
 
 ### Manual Testing user stories or/and features
+
+| Test Case ID | User Story | Preconditions | Test Steps | Expected Result | Status |
+|--------------|------------|---------------|------------|-----------------|--------|
+| CUS-001 | Browse providers in my town | Providers exist in Swansea in the database | 1. Navigate to "Home" and use "next", "previous" arrows and clicking page number to navigate.| List of childcare providers in Swansea is displayed | Pass |
+| CUS-002 | Filter by specific area | Providers have area tags assigned | 1. Apply filter for specific area (e.g., Uplands) | Only providers in that area are displayed | Pass |
+| CUS-003 | View detailed provider profiles | At least one provider profile exists | 1. Click on provider name/profile link | Full profile page opens showing services, description, and location | Pass |
+| PRO-001 | Create and log into an account | None | 1. Go to provider sign-up page<br>2. Fill in required fields and submit<br>3. Log in with created credentials | Account is created and provider can log in successfully | Pass|
+| PRO-002 | Create and publish a business profile | Provider is logged in | 1. Navigate to "Create Post"<br>2. Enter all required details<br>3. Publish | Business profile appears in public listings | Pass |
+| PRO-003 | Edit post | Provider is logged in and has a profile | 1. Navigate to "Manage Posts"<br>2. Click "Edit"<br> 3. Ament the post<br>3. Save | Updates details are displayed on profile | Pass |
+| PRO-004 | Update my profile | Provider is logged in and has a profile | 1. Navigate to profile settings<br>2. Edit any field<br>3. Save changes | Updated information is visible on public profile | Pass |
+| PRO-005 | Delete my listing | Provider is logged in and has a profile | 1. Navigate to profile settings<br>2. Click "Delete Listing"<br>3. Confirm deletion | Listing is removed from public view | Pass |
+| PRO-006 | Confirm delete message shown | Provider is logged in and has a profile | 1. Navigate to profile settings<br>2. Click "Delete Listing" | A confirmation message appears asking if the user is sure about deleting the listing | Pass |
+| SYS-001 | 404 page displays for invalid URL | None | 1. Open browser<br>2. Enter an invalid URL on the site (e.g., `/thispagedoesnotexist`)<br>3. Press Enter | A custom 404 error page is displayed with helpful navigation links | Pass |
+
 
 ### Accessibility
 
