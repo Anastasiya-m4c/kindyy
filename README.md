@@ -533,6 +533,10 @@ The site was deployed to Heroku app using the following method:
 
 16. Done! Kindyy is now live at: https://kindyy-3dd7c64206c7.herokuapp.com
 
+### Attribution:
+- The initial setup of this project was strongly inspired by the walkthrough project.  
+- Bootstrap was used as the foundation for the base templates, then extensively customized to achieve the desired design and functionality.  
+
 ### Special thanks:
 
 **David Bowers** for support and mentoring.  
