@@ -407,19 +407,12 @@ Linter warning for env file is being loaded but unused.
 **Cause:** `env.py` file is used to load the secret key, but Django (and linters) cannot detect its usage, so it thinks it is unused.  
 **Solution:** Use an inline comment to tell the linter to ignore the warning, since this is intentional to protect the secret key.
 
-## Known Issues
+## Known Issues  
 
 ### Issue: 
-Only "all areas" appear on pages like manage, create etc.   
-**Fix:** Fix is needed where areas appear on all pages. This will be addressed as part of future dev following MVP.   
+Only "all areas" appear on pages like manage, create etc.    
+**Fix:** This is not a bug but a CX improvement. New requirment is needed to enhance search functionality so that customers can search from any page on the site. This will be addressed as part of future development following MVP.   
 **Workaround:** Cust can click home and search by area, or can click all areas then further narrow down by area.   
-
----
-
-### Issue:
-Ligthouse report scors poorly on berformace due to unused CSS & JS code.  
-**Fix**: No fix is needed as both bootstrap and fontawesome labraries are being used and can not be removed.  
-![Lighthouse error](static/images/readme/Lighthouse_error.png)
 
 ---
 
@@ -553,6 +546,7 @@ The site was deployed to Heroku app using the following method:
 ### Attribution:
 - The initial setup of this project was strongly inspired by the walkthrough project.  
 - Bootstrap was used as the foundation for the base templates, then extensively customized to achieve the desired design and functionality.  
+- AI used for generating content, formatting and troubleshooting errors. 
 
 ### Special thanks:
 
